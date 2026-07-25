@@ -1,0 +1,122 @@
+/*
+ * Giscus 暗色主题，配色对齐设计 token（§5.4 / §6.6）。
+ * ⚠ giscus 以 <link crossorigin="anonymous"> 加载外链主题，要求响应带 CORS 头；
+ *   ziyiluo.com 的 nginx 不发 Access-Control-Allow-Origin，故本文件的服务副本
+ *   托管在 Bachamht/blog-comments 仓库的 GitHub Pages（自动带 ACAO: *），
+ *   本文件是仓库内的权威版本——改动后需同步推送到 blog-comments。
+ * 变量集与 giscus 官方 dark 主题对齐（缺变量会导致对应控件回退成黑字透明底）。
+ */
+main {
+  --color-prettylights-syntax-comment: #90979e;
+  --color-prettylights-syntax-constant: #9ad3ac;
+  --color-prettylights-syntax-entity: #d8dce0;
+  --color-prettylights-syntax-storage-modifier-import: #d8dce0;
+  --color-prettylights-syntax-entity-tag: #7fbf95;
+  --color-prettylights-syntax-keyword: #7fbf95;
+  --color-prettylights-syntax-string: #9ad3ac;
+  --color-prettylights-syntax-variable: #d8dce0;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #ff6b6b;
+  --color-prettylights-syntax-invalid-illegal-text: #e8ecef;
+  --color-prettylights-syntax-invalid-illegal-bg: #7f1d1d;
+  --color-prettylights-syntax-carriage-return-text: #e8ecef;
+  --color-prettylights-syntax-carriage-return-bg: #7fbf95;
+  --color-prettylights-syntax-string-regexp: #9ad3ac;
+  --color-prettylights-syntax-markup-list: #d8dce0;
+  --color-prettylights-syntax-markup-heading: #7fbf95;
+  --color-prettylights-syntax-markup-italic: #d8dce0;
+  --color-prettylights-syntax-markup-bold: #e8ecef;
+  --color-prettylights-syntax-markup-deleted-text: #e8ecef;
+  --color-prettylights-syntax-markup-deleted-bg: #3a1212;
+  --color-prettylights-syntax-markup-inserted-text: #9ad3ac;
+  --color-prettylights-syntax-markup-inserted-bg: #10251a;
+  --color-prettylights-syntax-markup-changed-text: #e8ecef;
+  --color-prettylights-syntax-markup-changed-bg: #2a2410;
+  --color-prettylights-syntax-markup-ignored-text: #d8dce0;
+  --color-prettylights-syntax-markup-ignored-bg: #24282d;
+  --color-prettylights-syntax-meta-diff-range: #9ad3ac;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #4a5158;
+
+  /* 普通按钮 */
+  --color-btn-text: #d8dce0;
+  --color-btn-bg: #131619;
+  --color-btn-border: #2f353b;
+  --color-btn-shadow: 0 0 #0000;
+  --color-btn-inset-shadow: 0 0 #0000;
+  --color-btn-hover-bg: #1a1e22;
+  --color-btn-hover-border: #4a5158;
+  --color-btn-active-bg: #1a1e22;
+  --color-btn-active-border: #4a5158;
+  --color-btn-selected-bg: #0b0d0e;
+
+  /* 主按钮（「使用 GitHub 登录」「发表评论」）：accent 绿底深色字 */
+  --color-btn-primary-text: #0b0d0e;
+  --color-btn-primary-bg: #7fbf95;
+  --color-btn-primary-border: transparent;
+  --color-btn-primary-shadow: 0 0 #0000;
+  --color-btn-primary-inset-shadow: 0 0 #0000;
+  --color-btn-primary-hover-bg: #9ad3ac;
+  --color-btn-primary-hover-border: transparent;
+  --color-btn-primary-selected-bg: #7fbf95;
+  --color-btn-primary-selected-shadow: 0 0 #0000;
+  --color-btn-primary-disabled-text: #0b0d0e99;
+  --color-btn-primary-disabled-bg: #7fbf9566;
+  --color-btn-primary-disabled-border: transparent;
+
+  /* 下拉菜单 / 分段控件 */
+  --color-action-list-item-default-hover-bg: #1a1e22;
+  --color-segmented-control-bg: #131619;
+  --color-segmented-control-button-bg: #0b0d0e;
+  --color-segmented-control-button-selected-border: #90979e;
+
+  /* 前景 / 画布 / 边框 */
+  --color-fg-default: #d8dce0;
+  --color-fg-muted: #90979e;
+  --color-fg-subtle: #6b7278;
+  --color-canvas-default: #0b0d0e;
+  --color-canvas-overlay: #131619;
+  --color-canvas-inset: #0b0d0e;
+  --color-canvas-subtle: #131619;
+  --color-border-default: #24282d;
+  --color-border-muted: #1a1e22;
+  --color-neutral-muted: #6b727866;
+
+  /* 语义色：accent 统一走本站绿 */
+  --color-accent-fg: #7fbf95;
+  --color-accent-emphasis: #7fbf95;
+  --color-accent-muted: #7fbf9566;
+  --color-accent-subtle: #7fbf951a;
+  --color-success-fg: #7fbf95;
+  --color-attention-fg: #d0a83c;
+  --color-attention-muted: #d0a83c66;
+  --color-attention-subtle: #d0a83c26;
+  --color-danger-fg: #ff6b6b;
+  --color-danger-muted: #ff6b6b66;
+  --color-danger-subtle: #ff6b6b1a;
+  --color-primer-shadow-inset: 0 0 #0000;
+
+  /* 表情回应 hover 底色（官方经 scale 变量引用） */
+  --color-scale-gray-7: #1a1e22;
+  --color-scale-blue-8: #1d3a2a;
+  --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
+
+  color-scheme: dark;
+}
+
+main .pagination-loader-container {
+  background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg);
+}
+
+main .gsc-loading-image {
+  background-image: url(https://github.githubassets.com/images/mona-loading-dark.gif);
+}
+
+main .gsc-comment-box-tabs,
+main .gsc-comment-box-preview {
+  border-color: #24282d;
+}
+
+main .gsc-comment-box-textarea {
+  color: #d8dce0;
+  background: #0b0d0e;
+}
